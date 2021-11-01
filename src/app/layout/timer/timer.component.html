@@ -1,0 +1,10 @@
+<button mat-raised-button (click)="create()" color="primary">Create Timer!</button>
+<div *ngIf="isTimerCreated">
+    Timer Created!
+    {{timer?.id}}
+    <br>
+    {{getTimer()}}
+    <button *ngIf="!isTimerStarted" mat-raised-button (click)="start()" color="primary">Start Timer!</button>
+    <button *ngIf="isTimerStarted" mat-raised-button (click)="resume()" color="primary">Resume Timer!</button>
+    <button mat-raised-button (click)="pause()" color="primary">Pause Timer!</button>
+</div>
